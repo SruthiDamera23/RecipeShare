@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width */
+}
+
+.home-icon {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #eee;
+    height: 85vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.sidebar-item {
+    opacity: 75%;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sidebar-item.highlighted {
+    opacity: 100%;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1; /* Take remaining width */
+    padding: 20px;
+}
+
+.search-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Add border for the search-filter */
+    padding: 10px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-options label {
+    margin-right: 15px;
+}
+
+.search-input {
+    flex-grow: 1; /* Take remaining width */
+    display: flex;
+    align-items: center;
+}
+
+.search-input input[type="text"]{
+    flex-grow: 1; /* Take remaining width */
+    padding: 10px;
+    border: none; /* Remove border for the textbox */
+}
+
+.search-input input[type="text"]:focus {
+    border: none !important; /* Remove border on focus */
+}
+
+
+
+.save-button {
+    padding: 10px;
+    background-color: #4caf50; /* Green background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

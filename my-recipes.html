@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>RecipeShare</title>
+
+    <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
+            <div class="logo">RecipeShare</div>
+            <div class="nav-links">
+                <a href="#">About Us</a>
+                <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <a class="sidebar-item"  href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
+            <a class="sidebar-item highlighted"  href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
+            <a class="sidebar-item"  href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a class="sidebar-item"  href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
+        </aside>
+
+        <main>
+            <div class="search-filter">
+                <input type="text" placeholder="Search...">
+                <select>
+                    <option value="all">All</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
