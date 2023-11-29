@@ -32,17 +32,63 @@
 
         <main>
             <div class="search-filter">
-                <input type="text" placeholder="Search...">
+
                 <select>
                     <option value="all">All</option>
                     <option value="breakfast">Breakfast</option>
                     <option value="lunch">Lunch</option>
                     <option value="dinner">Dinner</option>
                 </select>
+                <div class="search-input">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
             </div>
 
             
         </main>
+    </div>
+
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 style="color: #333;">Upload Recipe</h3>
+    
+            <!-- Recipe form sections -->
+            <div class="modal-section">
+                <label class="modal-label">Upload Picture:</label>
+                <div class="upload-box" style="border: 2px dashed #ddd; padding: 10px; text-align: center;">
+                    <input type="file" id="recipeImage" accept="image/*" style="display: none;">
+                    <label for="recipeImage" class="upload-button" style="color: #777; cursor:pointer;"> <i class="fas fa-plus"></i> Click to Upload</label>
+                </div>
+            </div>
+    
+            <div class="modal-section">
+                <label class="modal-label" for="recipeTitle">Title:</label>
+                <input type="text" id="recipeTitle" class="modal-input" placeholder="Enter the title">
+            </div>
+    
+            <div class="modal-section">
+                <label class="modal-label" for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" class="modal-textarea" placeholder="Enter the ingredients"></textarea>
+            </div>
+    
+            <div class="modal-section">
+                <label class="modal-label" for="cookingInstructions">Cooking Instructions:</label>
+                <textarea id="cookingInstructions" class="modal-textarea" placeholder="Enter the cooking instructions"></textarea>
+            </div>
+    
+            <div class="modal-section">
+                <label class="modal-label" for="cookingTime">Cooking Time:</label>
+                <input type="text" id="cookingTime" class="modal-input" placeholder="Enter the cooking time">
+            </div>
+    
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="cancel-button" onclick="closeModal()">Cancel</button>
+                <button class="upload-button" onclick="uploadRecipe()">Upload</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
