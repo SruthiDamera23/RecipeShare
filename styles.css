@@ -237,3 +237,25 @@ main {
 
 
 
+
+
+
+.recipeCard {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipeCard h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.recipeCard img {
+    width: 100%;
+    border-radius: 8px;
+}
+
