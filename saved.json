@@ -1,0 +1,35 @@
+{
+    "saved": [
+      {
+        "recipe_id": 1,
+        "image_url": "https://example.com/recipe1.jpg",
+        "title": "Classic Spaghetti Bolognese",
+        "instructions": "1. Boil water and cook spaghetti. 2. In a pan, brown ground beef with onions and garlic. 3. Add tomato sauce and simmer. 4. Serve over cooked spaghetti.",
+        "ingredients": "Spaghetti, Ground beef, Onion, Garlic, Tomato sauce, Salt, Pepper",
+        "cooking_time": 30,
+        "comments": ["Delicious!", "My family's favorite"],
+        "rating": 4.5
+      },
+      {
+        "recipe_id": 2,
+        "image_url": "https://example.com/recipe2.jpg",
+        "title": "Chicken Alfredo Pasta",
+        "instructions": "1. Cook pasta according to package instructions. 2. Sauté chicken until cooked. 3. Add cream, parmesan, and cooked pasta. 4. Stir and serve.",
+        "ingredients": "Pasta, Chicken breast, Cream, Parmesan cheese, Butter, Salt, Pepper",
+        "cooking_time": 40,
+        "comments": ["Creamy and delicious!", "Great comfort food"],
+        "rating": 4.8
+      },
+      {
+        "recipe_id": 3,
+        "image_url": "https://example.com/recipe3.jpg",
+        "title": "Vegetable Stir-Fry",
+        "instructions": "1. Heat oil in a pan. 2. Add mixed vegetables and stir-fry. 3. Season with soy sauce and serve.",
+        "ingredients": "Mixed vegetables (bell peppers, broccoli, carrots, mushrooms), Soy sauce, Oil",
+        "cooking_time": 20,
+        "comments": ["Healthy and quick!", "Love the vibrant colors"],
+        "rating": 4.2
+      }
+    ]
+  }
+  
