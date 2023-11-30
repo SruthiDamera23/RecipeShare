@@ -235,19 +235,23 @@ main {
     background-color: #45a049;
 }
 
-
-
-
-
+#recipeCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .recipeCard {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width based on the number of cards per row */
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
+
 
 .recipeCard h2 {
     text-align: center;
