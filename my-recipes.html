@@ -11,6 +11,10 @@
 </head>
 <body>
 
+    <script>
+        var existingRecipes = localStorage.getItem('myRecipes');
+        console.log(existingRecipes)
+    </script>
     <header>
         <div class="navbar">
             <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
@@ -44,7 +48,38 @@
                     <i class="fas fa-search"></i>
                 </div>
             </div>
-             <!---write your code here--->
+            <div id="recipeCardsContainer"></div>
+            <script>
+               document.addEventListener("DOMContentLoaded", function () {
+                const recipeCardsContainer = document.getElementById("recipeCardsContainer");
+            
+                const data= localStorage.getItem('recipes');
+                console.log(data);
+                if (data) {
+                const JSONData = JSON.parse(data);
+                
+                JSONData.recipes.forEach(recipe => {
+                            const card = document.createElement("div");
+                            card.classList.add("recipeCard");
+            
+                            // Create title element
+                            const title = document.createElement("h2");
+                            title.textContent = recipe.title;
+                            card.appendChild(title);
+            
+                            // Create image element
+                            const image = document.createElement("img");
+                            image.src = recipe.image_url;
+                            image.alt = recipe.title;
+                            card.appendChild(image);
+            
+                            // Append the card to the container
+                            recipeCardsContainer.appendChild(card);
+                        });
+                }
+                    
+            });
+        </script>
             
         </main>
     </div>
