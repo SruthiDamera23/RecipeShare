@@ -10,7 +10,27 @@
     <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+         const jsonFileUrl = 'my_recipes.json';
 
+// Fetch the JSON file
+fetch(jsonFileUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(recipes => {
+        // Store the recipes in local storage
+        localStorage.setItem('myRecipes', JSON.stringify(recipes));
+
+        console.log('Recipes loaded into local storage:', recipes);
+    })
+    .catch(error => {
+        console.error('Error loading recipes:', error);
+    });
+    </script>
     <header>
         <div class="navbar">
             <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
