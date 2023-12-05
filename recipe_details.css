@@ -1,0 +1,131 @@
+
+.recipe-details-container {
+  display: flex;
+  
+  margin: 20px auto;
+}
+
+
+.comment-container {
+  flex: 1;
+  padding-top: 400px;
+  position: absolute;
+  transform: translate(0, 8%);
+  box-sizing: border-box;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.iconbtn {
+  
+  font-size: 20px;
+  padding: 8px 12px;
+  color: #474444;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.comment-list {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.recipe-image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  padding-top: 20px;
+}
+
+.recipe-image {
+  height: 300px; /* Set a fixed height for the image container */
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid #777777;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  transform: translate(0, 20%);
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #dddddd;
+}
+
+#favoriteIcon,
+#saveIcon {
+
+}
+
+.recipe-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.details-container {
+  flex: 1;
+  height: 300px; /* Set a fixed height for the details container */
+  background-color: #dddddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cooking-time,
+.ingredients,
+.instructions {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.recipe-title{
+  margin-top:30px;
+  display:block;
+}

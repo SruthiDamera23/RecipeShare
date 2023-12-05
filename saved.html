@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
+
     <title>RecipeShare</title>
 
     <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <header>
         <div class="navbar">
-            <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
+            <a class="home-icon" href="home.html"><i class="fas fa-home"></i></a>
             <div class="logo">RecipeShare</div>
             <div class="nav-links">
-                <a href="#">About Us</a>
+                <a href="sample.html">About Us</a>
                 <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
             </div>
         </div>
@@ -24,10 +26,10 @@
 
     <div class="container">
         <aside class="sidebar">
-            <a class="sidebar-item highlighted"  href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
-            <a class="sidebar-item"  href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
-            <a class="sidebar-item"  href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
-            <a class="sidebar-item"  href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
+            <a class="sidebar-item highlighted" href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
+            <a class="sidebar-item" href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
+            <a class="sidebar-item" href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a class="sidebar-item" href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
         </aside>
 
         <main>
@@ -46,40 +48,56 @@
             </div>
             <div id="recipeCardsContainer"></div>
             <script>
-               document.addEventListener("DOMContentLoaded", function () {
-                const recipeCardsContainer = document.getElementById("recipeCardsContainer");
-            
-                const data= localStorage.getItem('saved');
-                console.log(data);
-                if (data) {
-                const JSONData = JSON.parse(data);
-                
-                JSONData.saved.forEach(recipe => {
+                document.addEventListener("DOMContentLoaded", function () {
+                    const recipeCardsContainer = document.getElementById("recipeCardsContainer");
+
+                    const data = localStorage.getItem('saved');
+
+                    if (data) {
+                        const JSONData = JSON.parse(data);
+
+                        JSONData.forEach((recipe, index) => {
                             const card = document.createElement("div");
+
+
                             card.classList.add("recipeCard");
-            
+
                             // Create title element
-                            const title = document.createElement("h2");
+                            const title = document.createElement("p");
+                            title.onclick = function () {
+                                handleRecipeCardClick(index);
+                            };
                             title.textContent = recipe.title;
                             card.appendChild(title);
-            
+
                             // Create image element
+                            const imgDiv = document.createElement("div");
+                            imgDiv.onclick = function () {
+                                handleRecipeCardClick(index);
+                            };
                             const image = document.createElement("img");
                             image.src = recipe.image_url;
                             image.alt = recipe.title;
-                            card.appendChild(image);
-            
+                            imgDiv.appendChild(image);
+
+                            card.appendChild(imgDiv);
+                            card.classList.add("recipeCard");
+
+
+
                             // Append the card to the container
                             recipeCardsContainer.appendChild(card);
                         });
-                }
-                    
-            });
-        </script>
-            
+                    }
+
+                });
+            </script>
+
+           
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="my-recipes.js"></script>
 </body>
+
 </html>

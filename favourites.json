@@ -1,35 +1,73 @@
-{
-    "favourites": [
-      {
-        "recipe_id": 1,
-        "image_url": "https://example.com/recipe1.jpg",
-        "title": "Classic Spaghetti Bolognese",
-        "instructions": "1. Boil water and cook spaghetti. 2. In a pan, brown ground beef with onions and garlic. 3. Add tomato sauce and simmer. 4. Serve over cooked spaghetti.",
-        "ingredients": "Spaghetti, Ground beef, Onion, Garlic, Tomato sauce, Salt, Pepper",
-        "cooking_time": 30,
-        "comments": ["Delicious!", "My family's favorite"],
-        "rating": 4.5
-      },
-      {
-        "recipe_id": 2,
-        "image_url": "https://example.com/recipe2.jpg",
-        "title": "Chicken Alfredo Pasta",
-        "instructions": "1. Cook pasta according to package instructions. 2. Sauté chicken until cooked. 3. Add cream, parmesan, and cooked pasta. 4. Stir and serve.",
-        "ingredients": "Pasta, Chicken breast, Cream, Parmesan cheese, Butter, Salt, Pepper",
-        "cooking_time": 40,
-        "comments": ["Creamy and delicious!", "Great comfort food"],
-        "rating": 4.8
-      },
-      {
-        "recipe_id": 3,
-        "image_url": "https://example.com/recipe3.jpg",
-        "title": "Vegetable Stir-Fry",
-        "instructions": "1. Heat oil in a pan. 2. Add mixed vegetables and stir-fry. 3. Season with soy sauce and serve.",
-        "ingredients": "Mixed vegetables (bell peppers, broccoli, carrots, mushrooms), Soy sauce, Oil",
-        "cooking_time": 20,
-        "comments": ["Healthy and quick!", "Love the vibrant colors"],
-        "rating": 4.2
-      }
-    ]
+[
+  {
+    "recipe_id": 1,
+    "image_url": "https://vikalinka.com/wp-content/uploads/2020/03/Spaghetti-Bolognese-13-Edit.jpg",
+    "title": "Classic Spaghetti Bolognese",
+    "instructions": "1. Boil water and cook spaghetti. 2. In a pan, brown ground beef with onions and garlic. 3. Add tomato sauce and simmer. 4. Serve over cooked spaghetti.",
+    "ingredients": "Spaghetti, Ground beef, Onion, Garlic, Tomato sauce, Salt, Pepper",
+    "cooking_time": 30,
+    "comments": ["Delicious!", "My family's favorite"],
+    "rating": 4.5
+  },
+  {
+    "recipe_id": 2,
+    "image_url": "https://fedbysab.com/wp-content/uploads/2023/01/Chicken-Alfredo-Bake-Recipe.jpg",
+    "title": "Chicken Alfredo Pasta",
+    "instructions": "1. Cook pasta according to package instructions. 2. Sauté chicken until cooked. 3. Add cream, parmesan, and cooked pasta. 4. Stir and serve.",
+    "ingredients": "Pasta, Chicken breast, Cream, Parmesan cheese, Butter, Salt, Pepper",
+    "cooking_time": 40,
+    "comments": ["Creamy and delicious!", "Great comfort food"],
+    "rating": 4.8
+  },
+  {
+    "recipe_id": 3,
+    "image_url": "https://www.cookingclassy.com/wp-content/uploads/2023/01/vegetable-stir-fry-3.jpg",
+    "title": "Vegetable Stir-Fry",
+    "instructions": "1. Heat oil in a pan. 2. Add mixed vegetables and stir-fry. 3. Season with soy sauce and serve.",
+    "ingredients": "Mixed vegetables (bell peppers, broccoli, carrots, mushrooms), Soy sauce, Oil",
+    "cooking_time": 20,
+    "comments": ["Healthy and quick!", "Love the vibrant colors"],
+    "rating": 4.2
+  },
+  {
+    "recipe_id": 7,
+    "image_url": "https://www.modernhoney.com/wp-content/uploads/2019/02/Creamy-Risotto-4.jpg",
+    "title": "Creamy Mushroom Risotto",
+    "instructions": "1. Sauté onions and mushrooms. 2. Add rice and stir. 3. Gradually add broth while stirring until rice is creamy and cooked.",
+    "ingredients": "Arborio rice, Mushrooms, Onion, Chicken broth, Parmesan cheese, Butter, White wine",
+    "cooking_time": 45,
+    "comments": ["Rich and comforting!", "Perfect for special occasions"],
+    "rating": 4.4
+  },
+  {
+    "recipe_id": 8,
+    "image_url": "https://www.onceuponachef.com/images/2021/11/Best-Chocolate-Chip-Cookies-1200x1499.jpg",
+    "title": "Chocolate Chip Cookies",
+    "instructions": "1. Cream butter and sugar. 2. Add eggs and vanilla. 3. Mix in flour, baking soda, and chocolate chips. 4. Bake until golden.",
+    "ingredients": "Butter, Sugar, Eggs, Vanilla extract, Flour, Baking soda, Chocolate chips",
+    "cooking_time": 15,
+    "comments": ["Amazing cookies!", "Soft and chewy"],
+    "rating": 4.9
+  },
+  {
+    "recipe_id": 9,
+    "image_url": "https://www.cookingclassy.com/wp-content/uploads/2019/05/fruit-salad-2.jpg",
+    "title": "Fresh Fruit Salad",
+    "instructions": "1. Chop assorted fruits. 2. Combine in a bowl. 3. Optional: add honey or lime juice for extra flavor.",
+    "ingredients": "Assorted fruits (strawberries, kiwi, pineapple, grapes, mango), Honey (optional), Lime juice (optional)",
+    "cooking_time": 10,
+    "comments": ["Refreshing and healthy!", "Great for summer"],
+    "rating": 4.6
+  },
+  {
+    "recipe_id": 10,
+    "image_url": "https://eatthegains.com/wp-content/uploads/2018/09/Beef-and-Broccoli-10.jpg",
+    "title": "Beef and Broccoli Stir-Fry",
+    "instructions": "1. Marinate beef in soy sauce and garlic. 2. Sauté beef until browned. 3. Add broccoli and stir-fry until tender.",
+    "ingredients": "Beef sirloin, Broccoli, Soy sauce, Garlic, Oil, Cornstarch, Rice vinegar",
+    "cooking_time": 30,
+    "comments": ["Classic Chinese dish!", "Tastes just like takeout"],
+    "rating": 4.7
   }
-  
+]
+

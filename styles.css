@@ -1,7 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
+    /* background-image: linear-gradient(180deg,#ffffffee 20%,rgba(224,237,255,0) 85%)!important; */
     margin: 0;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll;
+}
+
+#welcomeText{
+    
+    margin-bottom:30px;
+    color: #132644!important;
+    font-family: 'Inter',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+}
+.DescriptText{
+    margin-left:20%;
+    margin-right:20%;
+    font-family: 'Inter',Helvetica,Arial,Lucida,sans-serif;
+    text-align: center;
+    font-size: 17px;
+    line-height:30px ;
+}
+
+.welcome-container {
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjusted height for better visibility */
+    margin-left:auto;
+    margin-right:auto;
+}
+#welcomeImgContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#welcomeImg {
+    width: 80%;
+    border-radius: 10px;
 }
 
 header {
@@ -16,6 +58,17 @@ header {
     align-items: center;
     width: 100%; /* Full width */
 }
+
+.navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-decoration: none;
+  }
+  
+  .navbar .logo span {
+    color: #C06B3E;
+  }
 
 .home-icon {
     font-size: 1.5em;
@@ -39,7 +92,7 @@ header {
 }
 
 .sidebar {
-    background-color: #eee;
+    background-color: #4545452d;
     min-width: 200px;
     display: flex;
     flex-direction: column;
@@ -65,15 +118,19 @@ header {
 }
 
 main {
-    flex-grow: 1; /* Take remaining width */
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
 .search-filter {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-top:30px;
+    
     border: 1px solid #ddd; /* Add border for the search-filter */
     padding: 10px;
 }
@@ -117,6 +174,9 @@ main {
     background-color: #45a049; /* Darker green on hover */
 }
 
+#editModal{
+    display:none;
+}
 
 /* Add these styles for the modal */
 .modal {
@@ -236,30 +296,57 @@ main {
 }
 
 #recipeCardsContainer {
+    margin-top:10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    
 }
 
 .recipeCard {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust the width based on the number of cards per row */
-    border-radius: 10px;
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px); 
+    border-radius: 30px;
     border: 1px solid #ccc;
-    margin-bottom: 20px;
+    margin:10px;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    
 }
 
 
-.recipeCard h2 {
+
+
+.recipeCard p {
+    font-size: 20px;
     text-align: center;
-    margin-top: 0;
+    font-weight:bold;
+    cursor: pointer;
+    
+}
+.recipeCard div {
+    display:flex;
+    justify-content: center;
+   padding-bottom:5px;
 }
 
-.recipeCard img {
-    width: 100%;
+.recipeCard div img {
+    display:flex;
+    justify-content: center;
+    width:90%;
+    height:10vw;
     border-radius: 8px;
+    object-fit: cover;
 }
 
+
+
+
+.edit-icon {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+}

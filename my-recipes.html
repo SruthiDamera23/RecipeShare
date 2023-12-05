@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
+
     <title>RecipeShare</title>
 
     <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <script>
-        var existingRecipes = localStorage.getItem('myRecipes');
-        console.log(existingRecipes)
-    </script>
     <header>
         <div class="navbar">
-            <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
+            <a class="home-icon" href="home.html"><i class="fas fa-home"></i></a>
             <div class="logo">RecipeShare</div>
             <div class="nav-links">
-                <a href="#">About Us</a>
+                <a href="sample.html">About Us</a>
                 <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
             </div>
         </div>
@@ -28,10 +26,10 @@
 
     <div class="container">
         <aside class="sidebar">
-            <a class="sidebar-item"  href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
-            <a class="sidebar-item highlighted"  href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
-            <a class="sidebar-item"  href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
-            <a class="sidebar-item"  href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
+            <a class="sidebar-item" href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
+            <a class="sidebar-item highlighted" href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
+            <a class="sidebar-item" href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a class="sidebar-item" href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
         </aside>
 
         <main>
@@ -50,40 +48,88 @@
             </div>
             <div id="recipeCardsContainer"></div>
             <script>
-               document.addEventListener("DOMContentLoaded", function () {
-                const recipeCardsContainer = document.getElementById("recipeCardsContainer");
-            
-                const data= localStorage.getItem('recipes');
-                console.log(data);
-                if (data) {
-                const JSONData = JSON.parse(data);
-                
-                JSONData.recipes.forEach(recipe => {
+                document.addEventListener("DOMContentLoaded", function () {
+                    const recipeCardsContainer = document.getElementById("recipeCardsContainer");
+
+                    const data = localStorage.getItem('recipes');
+
+                    if (data) {
+                        const JSONData = JSON.parse(data);
+
+                        JSONData.forEach((recipe, index) => {
                             const card = document.createElement("div");
+
+
                             card.classList.add("recipeCard");
-            
+
+
+                            // Create edit icon
+                            const editIcon = document.createElement("i");
+                            editIcon.classList.add("fas", "fa-edit", "edit-icon");
+                            editIcon.addEventListener("click", () => openEditModal(index));
+                            card.appendChild(editIcon);
+
                             // Create title element
-                            const title = document.createElement("h2");
+                            const title = document.createElement("p");
+                            title.onclick = function () {
+                                handleRecipeCardClick(index);
+                            };
                             title.textContent = recipe.title;
                             card.appendChild(title);
-            
+
                             // Create image element
+                            const imgDiv = document.createElement("div");
+                            imgDiv.onclick = function () {
+                                handleRecipeCardClick(index);
+                            };
                             const image = document.createElement("img");
                             image.src = recipe.image_url;
                             image.alt = recipe.title;
-                            card.appendChild(image);
-            
+                            imgDiv.appendChild(image);
+
+                            card.appendChild(imgDiv);
+                            card.classList.add("recipeCard");
+
+
+
                             // Append the card to the container
                             recipeCardsContainer.appendChild(card);
                         });
-                }
-                    
-            });
-        </script>
-            
+                    }
+
+                });
+            </script>
+
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeEditModal()">&times;</span>
+                    <h2>Edit Recipe</h2>
+                    <div class="modal-section">
+                        <label class="modal-label" for="editTitle">Title:</label>
+                        <input type="text" id="editTitle" class="modal-input" >
+                    </div>
+                    <div class="modal-section">
+                        <label class="modal-label" for="editInstructions">Instructions:</label>
+                        <textarea id="editInstructions"
+                            class="modal-textarea"></textarea>
+                    </div>
+                    <div class="modal-section">
+                        <label class="modal-label" for="editIngredients">Ingredients:</label>
+                        <input type="text" id="editIngredients" class="modal-input">
+                    </div>
+                    <!-- Add more sections for other fields as needed -->
+                    <div class="button-container">
+                        <button class="upload-button" onclick="saveChanges()">Save Changes</button>
+                        <button class="cancel-button" onclick="closeEditModal()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        
         </main>
     </div>
-
-    <script src="script.js"></script>
+    <div id="uploadSuccessMessage" class="popup-message"></div>
+    <script src="my-recipes.js"></script>
+    <script src="upload-recipe.js"></script>
 </body>
+
 </html>
