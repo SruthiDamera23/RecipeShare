@@ -60,15 +60,14 @@ header {
 }
 
 .navbar .logo {
+    margin-left:20%;
     color: #fff;
     font-weight: 600;
     font-size: 2.1rem;
     text-decoration: none;
   }
   
-  .navbar .logo span {
-    color: #C06B3E;
-  }
+ 
 
 .home-icon {
     font-size: 1.5em;
@@ -126,23 +125,16 @@ main {
 }
 
 .search-filter {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     margin-top:30px;
     
     border: 1px solid #ddd; /* Add border for the search-filter */
     padding: 10px;
 }
 
-.filter-options {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.filter-options label {
-    margin-right: 15px;
-}
 
 .search-input {
     flex-grow: 1; /* Take remaining width */
@@ -349,4 +341,50 @@ main {
     font-size: 1em;
     color: #333;
     cursor: pointer;
+}
+
+.multi-selector{
+    position:relative;
+    width: 100px;
+    margin-right: 15px;
+   
+}
+.select-field{
+    text-align: center;
+    border: 1px solid rgb(187, 187, 187);
+}
+.select-field,.task,.list{
+    
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem;
+}
+.list{
+    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
+    display: none;
+    position:absolute;
+    z-index:1;
+    
+}
+.down-arrow{
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.task{
+    display: block;
+    padding-left: 0;
+}
+.task span{
+    float: right;
+    font-size: 0.6rem;
+    padding-top: 6px;
+}
+.task:hover{
+    background-color: aliceblue;
+}
+
+.rotate180{
+    transform: rotate(-60deg);
 }

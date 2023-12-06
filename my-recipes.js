@@ -1,6 +1,7 @@
 // Add these script functions to handle modal interactions
 var openIndex=0;
 function openEditModal(index) {
+    
     openIndex=index;
     var editModal = document.getElementById('editModal');
 
@@ -52,4 +53,5 @@ function handleRecipeCardClick(index){
                             localStorage.setItem('recipe-details', JSON.stringify(selectedRecipe));
                             
                             window.location.href = 'recipe_details.html';
+                            
 }

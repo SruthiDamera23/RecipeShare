@@ -12,14 +12,26 @@
 </head>
 
 <body>
-
+    <script>
+        function dropdownClick(){
+            if( document.querySelector('.list').style.display=='none'){
+            document.querySelector('.list').style.display = 'block';
+            }else{
+                document.querySelector('.list').style.display = 'none';  
+            }
+           }
+        
+           function searchClick(){
+            document.querySelector('.list').style.display = 'none'; 
+           }
+           </script>
     <header>
         <div class="navbar">
-            <a class="home-icon" href="home.html"><i class="fas fa-home"></i></a>
+            <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
             <div class="logo">RecipeShare</div>
             <div class="nav-links">
-                <a href="sample.html">About Us</a>
-                <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                <a href="about-us.html">About Us</a>
+                <a href="login.html"><button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
             </div>
         </div>
     </header>
@@ -33,19 +45,7 @@
         </aside>
 
         <main>
-            <div class="search-filter">
-
-                <select>
-                    <option value="all">All</option>
-                    <option value="breakfast">Breakfast</option>
-                    <option value="lunch">Lunch</option>
-                    <option value="dinner">Dinner</option>
-                </select>
-                <div class="search-input">
-                    <input type="text" placeholder="Search...">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
+            <h2>SAVED RECIPES</h2>
             <div id="recipeCardsContainer"></div>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
@@ -97,7 +97,7 @@
         </main>
     </div>
 
-    <script src="my-recipes.js"></script>
+    <script src="saved.js"></script>
 </body>
 
 </html>
