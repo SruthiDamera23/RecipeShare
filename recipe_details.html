@@ -68,8 +68,8 @@
          
           <h2 class="recipe-title"></h2>  
   <div class="recipe-details-container">
-    
-    <div class="recipe-image-container">
+    <div class="recipe-details-div">
+      <div class="recipe-image-container">
       
     <div class="recipe-image">
       <img class="recipe-details-image" alt="Recipe Image">
@@ -82,21 +82,8 @@
      
       
     </div>
-    </div>
-    <div class="comment-container">
-      <div class="comments">
-        <h2>Comments</h2>
-        <div class="comment-form">
-          <textarea id="user-comment" placeholder="Write your review"></textarea>
-          <button onclick="submitComment()">Submit</button>
-        </div>
-        <div class="comment-list">
-          <!-- Comments will be dynamically added here -->
-        </div>
       </div>
-    </div>
-    
-    <div class="recipe-info">
+      <div class="recipe-info">
       
       <div class="details-container">
         <div >
@@ -110,6 +97,20 @@
         <div >
           <h3>Instructions</h3>
           <p class="instructions"></p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="comment-container">
+      <div class="comments">
+        <h2>Comments</h2>
+        <div class="comment-form">
+          <textarea id="user-comment" placeholder="Write your review"></textarea>
+          <button onclick="submitComment()">Submit</button>
+        </div>
+          <!-- Comments will be dynamically added here -->
+          <div class="comment-list"></div>
         </div>
       </div>
     </div>
