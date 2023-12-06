@@ -239,7 +239,8 @@ header .navbar {
   box-sizing: border-box;
 }
 
-.signup-form button {
+.signup-form .button {
+  text-align: center;
   width: 100%;
   padding: 10px;
   background-color: #333;
@@ -250,7 +251,8 @@ header .navbar {
 }
 
 
-.login-form button {
+.login-form .button {
+  text-align: center;
   margin-top:20px;
   margin-bottom:20px;
   width: 100%;

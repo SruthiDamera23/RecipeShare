@@ -17,6 +17,12 @@
         <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
       </nav>
     </header>
+    <script>
+      function onButtonClick(){
+        console.log("xyz");
+        window.location.href="home.html";
+      }
+    </script>
 
     <section class="hero-section">
       <div class="container">
@@ -37,7 +43,7 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" >
                         
-                        <button><a style="color:white; text-decoration: none;" href="home.html">Sign Up</a></button>
+                        <div class="button" onClick="onButtonClick()">Sign Up</div>
                     </form>
                     <p>Already have an account? <a href="login.html">Login</a></p>
                 </div>
@@ -46,17 +52,7 @@
     </div>
     </section>
 
-    <script>
-      const header = document.querySelector("header");
-      const hamburgerBtn = document.querySelector("#hamburger-btn");
-      const closeMenuBtn = document.querySelector("#close-menu-btn");
-
-      // Toggle mobile menu on hamburger button click
-      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
-
-      // Close mobile menu on close button click
-      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
-    </script>
+    
     
   </body>
 </html>
