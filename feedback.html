@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>RecipeShare</title>
+
+    <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
+</head>
+<script>
+
+    function closeModal() {
+        // Redirect the user to the previous page
+        window.history.back();
+    }
+
+    function submitFeedback() {
+        // Validate the form fields here...
+
+        // Submit the form here...
+
+        // Display the confirmation modal
+        alert("Your feedback has been received. We will get back to you soon.");
+
+         // Wait for 2 seconds, then close the modal and redirect the user to the previous page
+       
+        window.history.back();
+    }
+        
+</script>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <a class="home-icon"  href="home.html"><i class="fas fa-home"></i></a>
+            <div class="logo">RecipeShare</div>
+            <div class="nav-links">
+                <a href="about-us.html">About Us</a>
+                <a href="login.html"><button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <a class="sidebar-item"  href="saved.html"><i class="fas fa-bookmark"></i> Saved</a>
+            <a class="sidebar-item"  href="my-recipes.html"><i class="fas fa-book"></i> My Recipes</a>
+            <a class="sidebar-item"  href="favourites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a class="sidebar-item"  href="upload-recipe.html"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
+            <a class="sidebar-item highlighted"  href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+            
+        </aside>
+
+        <main>
+            <div id="feedbackModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3 style="color: #333;">Submit Feedback</h3>
+        
+                    <!-- Feedback form sections -->
+                    <div class="modal-section">
+                        <label class="modal-label" for="feedbackTitle">Title:</label>
+                        <input type="text" id="feedbackTitle" class="modal-input" placeholder="Enter the title">
+                    </div>
+        
+                    <div class="modal-section">
+                        <label class="modal-label" for="feedbackFor">Feedback for:</label>
+                        <input type="text" id="feedbackFor" class="modal-input" placeholder="Enter the subject of your feedback">
+                    </div>
+        
+                    <div class="modal-section">
+                        <label class="modal-label" for="feedbackText">Your Feedback:</label>
+                        <textarea id="feedbackText" class="modal-textarea" placeholder="Enter your feedback"></textarea>
+                    </div>
+        
+                    <div class="modal-section">
+                        <label class="modal-label">Attach Files:</label>
+                        <div class="upload-box" style="border: 2px dashed #ddd; padding: 10px; text-align: center;">
+                            <input type="file" id="feedbackFile" accept="image/*, .pdf" style="display: none;">
+                            <label for="feedbackFile" class="upload-button" style="color: #777; cursor:pointer;"> <i class="fas fa-plus"></i> Click to Upload</label>
+                        </div>
+                    </div>
+        
+                    <div class="modal-section">
+                        <label class="modal-label" for="contactMethod">Best Way to Reach Out:</label>
+                        <input type="text" id="contactMethod" class="modal-input" placeholder="Enter your preferred contact method">
+                    </div>
+                   
+                    <!-- Buttons -->
+                    <div class="button-container">
+                        <button class="cancel-button" onclick="closeModal()">Cancel</button>
+                        <button class="upload-button" onclick="submitFeedback()">Submit</button>
+                    </div>
+                </div>
+            </div>        
+
+    
+</body>
+</html>
