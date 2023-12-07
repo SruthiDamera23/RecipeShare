@@ -8,6 +8,36 @@
 
   <script src="https://kit.fontawesome.com/99fa6e3e66.js" crossorigin="anonymous"></script>
   <title>Recipe Details</title>
+
+
+  <style>
+    /* Add styling for the popup */
+    .share-popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .share-icons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .share-icons i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+
+
 </head>
 <body>
 <script>
@@ -41,7 +71,49 @@
  
       
 });
+
+ 
+  // Function to handle the share button click
+  function showSharePopup() {
+    const popup = document.getElementById("sharePopup");
+    popup.style.display = "block";
+  }
+
+  // Function to hide the share popup
+  function closeSharePopup() {
+    const popup = document.getElementById("sharePopup");
+    popup.style.display = "none";
+  }
+
+  // Function to copy link to clipboard
+  function copyLinkToClipboard() {
+    const copyText = document.createElement("textarea");
+    copyText.value = window.location.href;
+    document.body.appendChild(copyText);
+    copyText.select();
+    document.execCommand("copy");
+    document.body.removeChild(copyText);
+    alert("Link copied to clipboard!");
+    closeSharePopup(); // Close the popup after copying the link
+  }
+
+  // Functions for sharing on social media
+  function shareOnWhatsApp() {
+    // Add logic to share on WhatsApp
+    alert("Share on WhatsApp clicked!");
+  }
+
+  function shareOnFacebook() {
+    // Add logic to share on Facebook
+    alert("Share on Facebook clicked!");
+  }
+
+  function shareOnInstagram() {
+    // Add logic to share on Instagram
+    alert("Share on Instagram clicked!");
+  }
 </script>
+
   
 <header>
   <div class="navbar">
@@ -75,12 +147,12 @@
       <img class="recipe-details-image" alt="Recipe Image">
     </div>
     <div class="icons-container">
-      <div class="btn iconbtn" ><i class="fa fa-share"></i><br>Share</div>
+      <div class="btn iconbtn" ><i onclick="showSharePopup()" class="fa fa-share"></i><br>Share</div>
       <div class="btn iconbtn" ><i class="fa fa-comment"></i><br>Comment</div>
       <div class="btn iconbtn" ><i id="favoriteIcon" onclick="toggleFavorite()" class="far fa-heart"></i><br>Favourite</div>
       <div class="btn iconbtn" ><i id="saveIcon" onclick="toggleSave()" class="far fa-bookmark"></i><br>Save</div>
      
-      
+
     </div>
       </div>
       <div class="recipe-info">
@@ -118,6 +190,17 @@
   
       </main>
       
+  </div>
+
+  <div id="sharePopup" class="share-popup">
+    <span onclick="closeSharePopup()" style="cursor: pointer; float: right; font-size: 20px; margin-bottom: 10px;">&times;</span>
+    <h2>Share Recipe</h2>
+    <div class="share-icons">
+      <i class="fab fa-whatsapp" onclick="shareOnWhatsApp()"></i>
+      <i class="fab fa-facebook" onclick="shareOnFacebook()"></i>
+      <i class="fab fa-instagram" onclick="shareOnInstagram()"></i>
+      <i class="fas fa-copy" onclick="copyLinkToClipboard()"></i>
+    </div>
   </div>
 
   <script src="recipe_details.js"></script>
