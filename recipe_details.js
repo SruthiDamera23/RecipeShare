@@ -57,7 +57,7 @@ function toggleSave() {
       const recipes = JSON.parse(localStorage.getItem('saved'));
       const recipe_details=JSON.parse(localStorage.getItem('recipe-details'));
       recipes.push(recipe_details);
-      localStorage.setItem('favourites', JSON.stringify(recipes));
+      localStorage.setItem('saved', JSON.stringify(recipes));
       saveIcon.classList.remove('far');
       saveIcon.classList.add('fas');
     } else {
